@@ -25,7 +25,7 @@ public class PlayerMovement : NetworkBehaviour
         if (HasStateAuthority)
         {
             Camera = Camera.main;
-            Camera.GetComponent<FirstPersonCamera>().Target = transform;
+            Camera.GetComponent<ThirdPersonCamera>().SetupPlayer(transform);
         }
     }
 
