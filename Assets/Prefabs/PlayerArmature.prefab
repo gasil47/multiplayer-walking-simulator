@@ -1404,6 +1404,7 @@ GameObject:
   - component: {fileID: 2842178047134416997}
   - component: {fileID: -804065473289985122}
   - component: {fileID: 1528984475699550815}
+  - component: {fileID: 9196734880375728470}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -1439,7 +1440,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4924971500724567632}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 36078ab0369161e49a29d349ae3e0739, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 89f358deabe746242a74281b3ca72caf, type: 3}
   m_Controller: {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -1676,6 +1677,7 @@ MonoBehaviour:
   - {fileID: 2842178047134416997}
   - {fileID: -804065473289985122}
   - {fileID: 1528984475699550815}
+  - {fileID: 9196734880375728470}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &2842178047134416997
 MonoBehaviour:
@@ -1727,6 +1729,18 @@ MonoBehaviour:
   _NetworkedPlayerName: 
   playerName: {fileID: 7657587627242864868}
   cam: {fileID: 0}
+--- !u!114 &9196734880375728470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4924971500724567632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47876dbfcd0e73c40b1e771a79cc2f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4939985346212808368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,7 +1756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5420711945194366984
 Transform:
   m_ObjectHideFlags: 0
@@ -2601,7 +2615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5350719492370960273
 Transform:
   m_ObjectHideFlags: 0

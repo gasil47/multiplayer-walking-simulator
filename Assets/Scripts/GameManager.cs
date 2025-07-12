@@ -1,5 +1,6 @@
 using System;
 using Fusion;
+using ReadyPlayerMe.Core;
 using StarterAssets;
 using TMPro;
 using UnityEngine;
@@ -7,7 +8,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    
+
     public FusionBootstrap fusion;
     public UICanvasControllerInput mobileInput;
     public GameObject loadingIcon;
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text playerNameTxt;
     public GameObject joinButton;
     public GameObject nameObject;
+
     private void Awake()
     {
         instance = this;
@@ -36,7 +38,6 @@ public class GameManager : MonoBehaviour
             nameObject.SetActive(true);
         }
     }
-
     public void SavePlayerName(TMP_InputField name)
     {
         PlayerPrefs.SetString("playerName", name.text);
@@ -54,5 +55,11 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         fusion.StartSharedClient();
+        GameEvents.OnGameStarted?.Invoke();
     }
+}
+
+public static class GameEvents
+{
+    public static Action OnGameStarted;
 }
